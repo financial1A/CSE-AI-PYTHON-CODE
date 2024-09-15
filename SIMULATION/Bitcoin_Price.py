@@ -12,7 +12,7 @@ btc_data = yf.download('BTC-USD', period='1y')
 # Reset index to get 'Date' as a column
 btc_data.reset_index(inplace=True)
 
-# Convert Date to ordinal format for regression (e.g., number of days since 1970-01-01)
+# Convert Date to ordinal format for regression 
 btc_data['Date_ordinal'] = btc_data['Date'].map(pd.Timestamp.toordinal)
 
 # Define features (X) and target (y) for regression
