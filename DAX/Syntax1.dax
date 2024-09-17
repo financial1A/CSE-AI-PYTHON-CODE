@@ -1,0 +1,28 @@
+//Table name - ASPI
+Date	Price
+08/30/2024	10,883.63
+08/29/2024	10,936.23
+08/28/2024	10,975.79
+08/27/2024	N/A
+08/26/2024	11,212.58
+
+
+Average_Price = AVERAGE('ASPI'[Price])
+
+
+AverageA_Price = AVERAGEA('ASPI'[Price])
+//10,883.63 + 10,936.23 + 10,975.79 + 0 + 11,212.58 = 43,008.23
+//AverageA_Price = 43,008.23 / 5 = 8,601.646
+
+
+AverageX_Price = AVERAGEX(
+    'ASPI',
+    IF(
+        ISNUMBER('ASPI'[Price]),
+        'ASPI'[Price],
+        11000 // Ignore text and non-numeric values
+    )
+)
+
+//10,883.63 + 10,936.23 + 10,975.79 + 11000 + 11,212.58 = 53,008.23
+//AverageX_Price = 53,008.23 / 5 = 10,601.65
