@@ -1,0 +1,11 @@
+Difference = 'ASPI'[High] - 'ASPI'[Low]
+
+
+Price_Rank = 
+RANKX(
+    ALL('ASPI'), 
+    'ASPI'[Price], 
+    , 
+    DESC, 
+    DENSE
+)
