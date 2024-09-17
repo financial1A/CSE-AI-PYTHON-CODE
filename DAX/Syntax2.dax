@@ -1,0 +1,23 @@
+//Table name - ASPI
+Date	Price
+08/30/2024	10,883.63
+08/29/2024	10,936.23
+08/28/2024	10,975.79
+08/27/2024	N/A
+08/26/2024	11,212.58
+
+Count_Numeric_Values = COUNT('ASPI'[Price])
+//4
+
+Count_Non_Blank_Values = COUNTA('ASPI'[Price])
+//5
+
+CountX_Numeric_Values = COUNTX(
+    'ASPI',
+    IF(
+        ISNUMBER('ASPI'[Price]),
+        'ASPI'[Price],
+        11000 // Non-numeric values assign to 11000
+    )
+)
+//5
