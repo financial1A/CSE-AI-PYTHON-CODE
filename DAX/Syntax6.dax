@@ -1,0 +1,34 @@
+//Table name = ASPI
+Date	Price
+08/30/2024	10,883.63
+08/29/2024	10,936.23
+08/28/2024	10,975.79
+08/27/2024	N/A
+08/26/2024	11,212.58
+
+
+Total_Product = PRODUCT('ASPI'[Price])
+//10,883.63 * 10,936.23 * 10,975.79 * 11,212.58
+
+Total_ProductX = PRODUCTX(
+    'ASPI',
+    IF(
+        ISNUMBER('ASPI'[Price]),
+        'ASPI'[Price],
+        1 // Treat non-numeric values as 1 so they don't affect the product
+    )
+)
+
+
+
+Total_Sum = SUM('ASPI'[Price])
+//10,883.63 + 10,936.23 + 10,975.79 + 11,212.58 = 54,008.23
+
+Total_SumX = SUMX(
+    'ASPI',
+    IF(
+        ISNUMBER('ASPI'[Price]),
+        'ASPI'[Price],
+        11000 // Treat non-numeric values as 11,000
+    )
+)

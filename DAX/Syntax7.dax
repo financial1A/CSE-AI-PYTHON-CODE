@@ -1,0 +1,23 @@
+Date = CALENDAR(DATE(2023, 1, 1), DATE(2023, 12, 31))
+
+Date
+01/01/2023
+02/01/2023
+03/01/2023
+...
+12/31/2023
+
+
+DateDifference = DATEDIFF(DATE(2024, 8, 30), DATE(2025, 8, 30), YEAR)
+//1
+
+DateDifferenceMonths = DATEDIFF(DATE(2024, 8, 30), DATE(2025, 8, 30), MONTH)
+//12
+
+//Table name - ASPI
+Start Date	End Date
+01/01/2023	12/31/2023
+
+
+DateDifference = DATEDIFF('ASPI'[Start Date], 'ASPI'[End Date], DAY)
+//364

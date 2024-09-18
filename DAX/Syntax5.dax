@@ -1,0 +1,23 @@
+//Table name - ASPI
+Date	Price
+08/30/2024	10,883.63
+08/29/2024	10,936.23
+08/28/2024	10,975.79
+08/27/2024	N/A
+08/26/2024	11,212.58
+
+MIN_Price = MIN('ASPI'[Price])
+//10,883.63
+
+MINA_Price = MINA('ASPI'[Price])
+//0
+
+MINX_Price = MINX(
+    'ASPI',
+    IF(
+        ISNUMBER('ASPI'[Price]),
+        'ASPI'[Price],
+        11000 // Treat non-numeric values as 11000
+    )
+)
+//10,883.63

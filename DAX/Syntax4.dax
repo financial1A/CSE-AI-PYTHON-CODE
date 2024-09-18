@@ -1,0 +1,23 @@
+//Table name - ASPI
+Date	Price
+08/30/2024	10,883.63
+08/29/2024	10,936.23
+08/28/2024	10,975.79
+08/27/2024	N/A
+08/26/2024	11,212.58
+
+Max_Price = MAX('ASPI'[Price])
+//11,212.58
+
+MaxA_Price = MAXA('ASPI'[Price])
+//11,212.58
+
+MaxX_Price = MAXX(
+    'ASPI',
+    IF(
+        ISNUMBER('ASPI'[Price]),
+        'ASPI'[Price],
+        0 // Treat non-numeric values as 0
+    )
+)
+//11,212.58

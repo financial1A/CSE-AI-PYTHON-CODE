@@ -1,0 +1,30 @@
+//Table name - ASPI
+Date	Price
+08/30/2024	10,883.63
+08/29/2024	10,936.23
+08/28/2024	10,975.79
+08/27/2024	N/A
+08/26/2024	11,212.58
+08/25/2024	N/A
+
+CountAX_Numeric_Values = COUNTAX(
+    'ASPI',
+    IF(
+        ISNUMBER('ASPI'[Price]),
+        'ASPI'[Price],
+        BLANK() // Exclude non-numeric values
+    )
+)
+//4
+
+Count_Blank_Values = COUNTBLANK('ASPI'[Price])
+//2
+
+Count_Rows = COUNTROWS('ASPI')
+//6
+
+Distinct_Count_Price = DISTINCTCOUNT('ASPI'[Price])
+//4
+
+Distinct_Count_No_Blank_Price = DISTINCTCOUNTNOBLANK('ASPI'[Price])
+//4
