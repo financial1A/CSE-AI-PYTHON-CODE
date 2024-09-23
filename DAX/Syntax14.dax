@@ -1,0 +1,16 @@
+//Sales table
+OrderID	Amount	Product	Region
+1	100	Shoes	North
+2	150	Shirt	South
+3	200	Shoes	(blank)
+4	50	Hat	West
+5	300	Hat	(blank)
+
+TotalSalesNoBlanks = CALCULATE(SUM(Sales[Amount]), ALLNOBLANKROW(Sales[Region]))
+// "North", "South", and "West" regions: 100 + 150 + 50 = 300
+
+TotalSalesAllSelected = CALCULATE(SUM(Sales[Amount]), ALLSELECTED(Sales[Product]))
+
+
+TotalSalesNorth = CALCULATE(SUM(Sales[Amount]), Sales[Region] = "North")
+//100 + 300 = 400

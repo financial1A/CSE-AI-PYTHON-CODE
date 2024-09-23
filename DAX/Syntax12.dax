@@ -1,0 +1,24 @@
+WeekdayValue = WEEKDAY('Sales'[OrderDate], 2)
+//09/18/2024, it returns 3 (Wednesday).
+// 0: US (NASD) 30/360.
+// 1: Actual/Actual.
+// 2: Actual/360.
+// 3: Actual/365.
+// 4: European 30/360.
+
+
+//Table name = Sales
+OrderID	OrderDate
+101	01/01/2024
+102	03/15/2024
+103	09/18/2024
+104	12/31/2023
+
+YearFraction = YEARFRAC('Sales'[OrderDate], TODAY(), 1)
+//1 or omitted: Week starts on Sunday.
+//2: Week starts on Monday
+//0.711 (if from 01/01/2024 to 09/18/2024)
+
+
+WeekNumber = WEEKNUM('Sales'[OrderDate], 2)
+//38

@@ -1,0 +1,8 @@
+TimeFromText = TIMEVALUE("14:30:00")
+//0.604167 ( 14:30, which is 60.42% of the day)
+
+CurrentUTCDateTime = UTCNOW()
+
+
+CurrentDate = TODAY()
+//09/18/2024

@@ -1,0 +1,21 @@
+//Sales table
+OrderID	Amount	Product	Region
+1	100	Shoes	North
+2	150	Shirt	South
+3	200	Shoes	East
+4	50	Hat	West
+5	300	Hat	North
+
+// Filter on Product = "Shoes"
+TotalSalesAllProducts = CALCULATE(SUM(Sales[Amount]), ALL(Sales[Product]))
+
+// Filter on Region = "North"
+TotalSalesIgnoreCrossFilters = CALCULATE(SUM(Sales[Amount]), ALLCROSSFILTERED(Sales))
+
+
+TotalSalesByRegion = CALCULATE(SUM(Sales[Amount]), ALLEXCEPT(Sales, Sales[Region]))
+
+
+// TotalSalesAllProducts	800
+// TotalSalesIgnoreCrossFilters	300 (Shoes only, respects Product filter, but ignores cross-filters from Region)
+// TotalSalesByRegion	400 (Only sales for Region = "North", ignores Product filter)

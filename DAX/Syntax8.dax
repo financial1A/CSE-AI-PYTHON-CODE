@@ -1,0 +1,15 @@
+//Table name = ASPIS
+Date	Price
+08/30/2024	10,883.63
+08/29/2024	10,936.23
+08/28/2024	10,975.79
+
+
+ConvertedDate = DATEVALUE("08/30/2024")  
+// Result: 08/30/2024
+
+DayPart = DAY('ASPI'[Date])  
+// Extracts the day part from the Date column
+
+FutureDate = EDATE('ASPI'[Date], 2)  
+// Adds 2 months to each date in the Date column

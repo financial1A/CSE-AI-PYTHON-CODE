@@ -1,0 +1,34 @@
+//Sales table 
+OrderID	Amount	Product	Region
+1	    100	Shoes	North
+2	    150	Shirt	South
+3	    200	Shoes	(blank)
+4	    50	Hat	    West
+5	    300	Hat	    North
+
+SalesNorth = CALCULATETABLE(Sales, Sales[Region] = "North")
+
+OrderID	Amount	Product	Region
+1	100	Shoes	North
+5	300	Hat	    North
+
+//Employees table
+EmployeeID	Name	Salary
+1	Alice	50000
+2	Bob	    60000
+3	Carol	55000
+
+SalaryDifference = Employees[Salary] - EARLIER(Employees[Salary], 1)
+
+EmployeeID	Name	Salary	SalaryDifference
+1	        Alice	50000	(blank)
+2	        Bob	    60000	10000
+3	        Carol	55000	-5000
+
+
+SalaryDifferenceFromFirst = Employees[Salary] - EARLIEST(Employees[Salary])
+
+EmployeeID	Name	Salary	SalaryDifferenceFromFirst
+1	        Alice	50000	0
+2	        Bob	    60000	10000
+3	        Carol	55000	5000

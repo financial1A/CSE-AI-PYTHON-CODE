@@ -1,0 +1,17 @@
+//Sales Table
+OrderTime
+08/30/2024 14:45:30
+08/29/2024 09:15:00
+08/28/2024 18:30:45
+
+
+MinuteFromColumn = HOUR('Sales'[OrderTime])
+
+// Calculate end of month two months after the current date
+EndOfMonth = EOMONTH(DATE(2024, 8, 30), 2)  // Result: 10/31/2024
+
+// Extract hour from a specific time
+OrderHour = HOUR(TIME(14, 45, 30))  // Result: 14
+
+// Extract minute from a specific time
+OrderMinute = MINUTE(TIME(14, 45, 30))  // Result: 45

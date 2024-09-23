@@ -1,0 +1,19 @@
+WorkDays = NETWORKDAYS(DATE(2024, 8, 1), DATE(2024, 8, 31))
+//23
+
+WorkDaysWithHolidays = NETWORKDAYS(DATE(2024, 8, 1), DATE(2024, 8, 31), {DATE(2024, 8, 15)})
+//22
+
+CurrentTime = NOW()
+//09/18/2024 14:00:00
+
+SalesQuarter = QUARTER(DATE(2024, 8, 15))
+//3
+
+//Sales Table 
+OrderDate	
+08/30/2024	
+09/05/2024	
+10/12/2024	
+
+QuarterFromOrderDate = QUARTER('Sales'[OrderDate])
