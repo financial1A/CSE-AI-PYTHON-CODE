@@ -1,0 +1,16 @@
+// Settlement Date: March 1, 2024
+// Maturity Date: June 1, 2028
+// Coupon Frequency: Semiannual (2)
+PreviousCouponDate = COUPPCD(DATE(2024,3,1), DATE(2028,6,1), 2)
+
+
+// Annual Interest Rate: 5%
+// Periods: 10 years (or 120 months)
+// Loan Amount (Pv): $100,000
+// Start Period: 1
+// End Period: 12 (first year)
+
+TotalInterest = CUMIPMT(0.05/12, 120, 100000, 1, 12, 0)
+
+
+TotalPrincipal = CUMPRINC(0.05/12, 120, 100000, 1, 12, 0)

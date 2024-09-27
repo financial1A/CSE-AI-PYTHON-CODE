@@ -1,0 +1,13 @@
+//purchased an asset for $10,000 on January 1, 2022, with a salvage value of $500,
+// and a useful life of 5 years.
+LinearDepreciation = AMORLINC(10000, DATE(2022,1,1), DATE(2022,12,31), 500, 1, 5)
+//$1,900 per year
+//linear depreciation
+
+
+//settlement date of March 1, 2024, a maturity date of June 1, 2028
+DaysFromStartOfPeriod = COUPDAYBS(DATE(2024,3,1), DATE(2028,6,1), 2)
+//90 days
+
+DaysInCouponPeriod = COUPDAYS(DATE(2024,3,1), DATE(2028,6,1), 2)
+//180 or 181 days

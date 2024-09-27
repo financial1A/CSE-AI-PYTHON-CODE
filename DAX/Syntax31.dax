@@ -1,0 +1,31 @@
+// Settlement date: 01/01/2023
+// Maturity date: 01/01/2033
+// Issue date: 01/01/2022
+// First coupon payment date: 06/01/2023
+// Coupon rate: 5%
+// Bond price: $98.00 per $100 face value
+// Redemption value: $100 per $100 face value
+// Frequency: 2 (semiannual payments)
+
+ODDFYIELD("01/01/2023", "01/01/2033", "01/01/2022", "06/01/2023", 0.05, 98, 100, 2)
+
+
+// Settlement date: 01/01/2023
+// Maturity date: 12/01/2029
+// Last coupon payment date: 06/01/2029
+// Annual coupon rate: 4%
+// Bond yield: 3.5%
+// Redemption value: $100 per $100 face value
+// Frequency: 2 (semiannual payments)
+
+ODDLPRICE("01/01/2023", "12/01/2029", "06/01/2029", 0.04, 0.035, 100, 2)
+
+// Settlement date: 01/01/2023
+// Maturity date: 12/01/2029
+// Last coupon payment date: 06/01/2029
+// Coupon rate: 4%
+// Bond price: $98.50 per $100 face value
+// Redemption value: $100 per $100 face value
+// Frequency: 2 (semiannual payments)
+
+ODDLYIELD("01/01/2023", "12/01/2029", "06/01/2029", 0.04, 98.50, 100, 2)

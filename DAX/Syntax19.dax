@@ -1,0 +1,17 @@
+//Sales table
+Date	    SalesAmount
+2024-08-01	100
+2024-08-02	150
+2024-08-03	200
+2024-08-04	300
+2024-08-05	250
+
+MovingAverage3Days = 
+CALCULATE(
+    AVERAGEX(Sales, Sales[SalesAmount]),
+    DATESINPERIOD(Sales[Date], LASTDATE(Sales[Date]), -3, DAY)
+)
+
+
+
+SalesRank = RANKX(ALL(Sales), Sales[SalesAmount], , DESC)

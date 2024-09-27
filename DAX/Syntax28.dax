@@ -1,0 +1,21 @@
+//Nominal rate: 6% (or 0.06)
+//Compounding periods per year: 4 (quarterly compounding)
+EFFECT(0.06, 4)
+//6.136%
+
+
+// Interest rate: 5% annually (or 0.05)
+// Number of periods: 10 years
+// Payment per period: $1000
+// Present value: $5000
+
+FV(0.05, 10, -1000, -5000, 0)
+//$21,610.51
+
+// Settlement date: 01/01/2024
+// Maturity date: 01/01/2025
+// Investment: $1000
+// Redemption: $1100
+
+INTRATE("01/01/2024", "01/01/2025", 1000, 1100, 0)
+10%

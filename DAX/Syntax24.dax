@@ -1,0 +1,8 @@
+DaysToNextCoupon = COUPDAYSNC(DATE(2024,3,1), DATE(2028,6,1), 2)
+//92 days
+
+NextCouponDate = COUPNCD(DATE(2024,3,1), DATE(2028,6,1), 2)
+//June 1, 2024
+
+RemainingCoupons = COUPNUM(DATE(2024,3,1), DATE(2028,6,1), 2)
+//8 coupons

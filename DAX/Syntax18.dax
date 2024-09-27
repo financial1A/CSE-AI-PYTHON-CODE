@@ -1,0 +1,19 @@
+//Sales table
+OrderDate	SalesAmount	Region
+2024-08-01	100	        North
+2024-08-02	(blank)	    South
+2024-08-03	150	        East
+2024-08-04	200	        North
+2024-08-05	(blank)	    West
+
+LastRegion = LASTNONBLANKVALUE(Sales[SalesAmount], Sales[Region])
+//North
+
+//Product table
+ProductID	ProductName	Price
+1	        Shoes	    50
+2	        Shirt	    25
+3	        Hat	        15
+
+PriceOfShirt = LOOKUPVALUE(Products[Price], Products[ProductName], "Shirt")
+//25

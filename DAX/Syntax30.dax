@@ -1,0 +1,23 @@
+// Effective interest rate: 8% (0.08)
+// Compounding periods per year: 4 (quarterly)
+
+NOMINAL(0.08, 4)
+//7.74%
+
+// Annual interest rate: 5% (or 0.05/12 for monthly)
+// Monthly payment: $200 (outflow)
+// Loan amount: $10,000
+// Future value: 0 (loan fully paid)
+
+NPER(0.05/12, -200, 10000)
+//56 months
+
+// Settlement date: 01/01/2023
+// Maturity date: 01/01/2033
+// Last interest payment: 01/01/2022
+// Annual coupon rate: 5%
+// Yield: 6%
+// Redemption value: $1,000
+// Frequency: 2 (semi-annual)
+
+ODDFPRICE("01/01/2023", "01/01/2033", "01/01/2022", 0.05, 0.06, 1000, 2)

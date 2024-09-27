@@ -1,0 +1,16 @@
+//Sales table
+OrderID	Amount	Product	Region
+1	    100	    Shoes	North
+2	    150	    Shirt	South
+3	    200	    Shoes	North
+4	    50	    Hat	    East
+5	    300	    Hat	    North
+
+HighSales = FILTER(Sales, Sales[Amount] > 150)
+OrderID	Amount	Product	Region
+3	    200	    Shoes	North
+5	    300	    Hat	    North
+
+FirstProduct = FIRSTNONBLANK(Sales[Product], Sales[Product])
+
+FirstNonBlankAmount = FIRSTNONBLANKVALUE(Sales[Product], Sales[Amount])

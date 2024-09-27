@@ -1,0 +1,24 @@
+//Sales table
+Category	SalesAmount
+Electronics	500
+Clothing	200
+
+SelectedCategory = SELECTEDVALUE(Sales[Category], "Multiple Categories")
+
+
+//Sales table
+Product	SalesAmount
+Product A	1500
+Product B	2000
+Product C	1200
+Product D	2200
+Product E	1800
+
+Top3Products = 
+TOPN(
+    3, 
+    Sales, 
+    Sales[SalesAmount], 
+    DESC
+)
+

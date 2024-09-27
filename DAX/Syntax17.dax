@@ -1,0 +1,22 @@
+//Product table
+ProductID	ProductName	Price
+1	        Shoes	    50
+2	        Shirt	    25
+3	        Hat	        15
+
+SecondProductName = INDEX(Products[ProductName], 2)
+//"Shirt"
+
+//Sales table
+OrderID	Amount	Region
+1	    100	    North
+2	    150	    South
+3	    200	    North
+4	    (blank)	    East
+5	    300	    North
+
+TotalNorthSales = CALCULATE(SUM(Sales[Amount]), KEEPFILTERS(Sales[Region] = "North"))
+
+
+LastSalesAmount = LASTNONBLANK(Sales[Amount], Sales[Amount])
+//300

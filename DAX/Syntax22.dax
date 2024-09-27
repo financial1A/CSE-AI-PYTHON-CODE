@@ -1,0 +1,18 @@
+//ACCRINT(issue, first_interest, settlement, rate, par, frequency, [basis])
+
+AccruedInterest = ACCRINT(DATE(2023,1,1), DATE(2023,6,1), DATE(2023,3,1), 0.05, 1000, 2, 0)
+// $8.33
+
+
+
+//ACCRINTM(issue, settlement, rate, par, [basis])
+
+AccruedInterestMaturity = ACCRINTM(DATE(2023,1,1), DATE(2024,1,1), 0.06, 1000, 0)
+//$60
+
+
+
+//AMORDEGRC(cost, date_purchased, first_period, salvage, period, rate, basis) , declining balance method
+
+DepreciationValue = AMORDEGRC(5000, DATE(2022,1,1), DATE(2022,12,31), 500, 2, 0.20, 0)
+//$800
