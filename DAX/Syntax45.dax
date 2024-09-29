@@ -1,0 +1,29 @@
+CheckIfNumber = 
+IF(ISNUMBER(Sales[SalesAmount]), 
+   "Is Number", 
+   "Not Number")
+
+// SalesID	SalesAmount
+// 1	500
+// 2	"N/A"
+// 3	300
+
+OddOrEven = 
+IF(ISODD(Sales[SalesID]), 
+   "Odd ID", 
+   "Even ID")
+
+// SalesID	SalesAmount
+// 1	    500
+// 2	    300
+// 3	    700
+
+CheckSalesDate = 
+IF(ISONORAFTER(Sales[SalesDate], DATE(2023, 1, 1), DESC), 
+   "On or After Jan 1, 2023", 
+   "Before Jan 1, 2023")
+
+// SalesID	SalesDate	SalesAmount
+// 1	    2023-02-01	500
+// 2	    2022-12-15	300
+// 3	    2023-01-10	700

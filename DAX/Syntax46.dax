@@ -1,0 +1,28 @@
+MeasureCheck = 
+IF(ISSELECTEDMEASURE([Total Sales]), 
+   "Showing Total Sales", 
+   "Other Measure Selected")
+
+
+SubtotalCheck = 
+IF(ISSUBTOTAL(Sales[ProductCategory]), 
+   "Subtotal Row", 
+   "Regular Row")
+
+
+// ProductCategory	SalesAmount
+// Electronics	    500
+// Clothing	        300
+// Electronics	    200
+// Clothing	        100
+
+
+CheckIfText = 
+IF(ISTEXT(Sales[ProductName]), 
+   "Text Value", 
+   "Not Text")
+
+// SalesID	ProductName	SalesAmount
+// 1	    "Laptop"	500
+// 2	    "Phone"	    300
+// 3	    123	        400

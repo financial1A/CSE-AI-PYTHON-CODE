@@ -1,0 +1,28 @@
+// ProductID	SalesAmount
+// 1001	        500
+// 1002	        BLANK()
+// 1003	        400
+
+CheckBlankSalesAmount = 
+IF(ISBLANK(Sales[SalesAmount]), 
+   "No Sales Amount", 
+   Sales[SalesAmount])
+
+
+CheckCrossFiltering = 
+IF(ISCROSSFILTERED(Product[ProductID]), 
+   "Product Filtered", 
+   "No Product Filter")
+
+// SalesID	ProductID	SalesAmount
+// 1	    1001	    500
+// 2	    1002	    300
+
+// ProductID	ProductName
+// 1001	    Laptop
+// 1002	    Phone
+
+CheckEmptySalesForProduct = 
+IF(ISEMPTY(FILTER(Sales, Sales[ProductID] = 1003)), 
+   "No Sales for Product 1003", 
+   "Sales exist for Product 1003")

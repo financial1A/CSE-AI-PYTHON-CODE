@@ -1,0 +1,24 @@
+// Settlement date: 01-Jan-2023
+// Maturity date: 01-Jan-2030
+// Coupon rate: 5%
+// Yield: 6%
+// Redemption: $100
+// Frequency: 2 (semiannual payments)
+
+PRICE("01/01/2023", "01/01/2030", 0.05, 0.06, 100, 2)
+
+// Settlement date: 01-Jan-2023
+// Maturity date: 01-Jul-2023
+// Discount rate: 5%
+// Redemption: $100
+
+PRICEDISC("01/01/2023", "01/07/2023", 0.05, 100)
+
+
+// Settlement date: 01-Jan-2023
+// Maturity date: 01-Jan-2028
+// Issue date: 01-Jan-2020
+// Coupon rate: 5%
+// Yield: 6%
+
+PRICEMAT("01/01/2023", "01/01/2028", "01/01/2020", 0.05, 0.06)

@@ -1,0 +1,21 @@
+CheckSingleProductFilter = 
+IF(HASONEFILTER(Sales[ProductID]), 
+   "One Product Filtered", 
+   "Multiple or No Products Filtered")
+
+
+TotalSalesIfOneProduct = 
+IF(HASONEVALUE(Sales[ProductID]), 
+   SUM(Sales[SalesAmount]), 
+   BLANK())
+
+
+ShippedAfterOrder = 
+IF(ISAFTER(Sales[ShippedDate], Sales[OrderDate]), 
+   "Shipped after Order", 
+   "Shipped before or same day as Order")
+
+// OrderID	OrderDate	ShippedDate
+// 1001	    2024-01-01	2024-01-03
+// 1002	    2024-01-02	2024-01-01
+// 1003	    2024-01-03	2024-01-03

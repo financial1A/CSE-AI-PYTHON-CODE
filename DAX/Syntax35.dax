@@ -1,0 +1,17 @@
+//investment grows from $1,000 to $2,000 over 10 years,
+// you can calculate the rate of return needed using the RRI function:
+
+RRI(10, 1000, 2000)
+
+//equipment for $10,000, expect it to last 5 years, and estimate its salvage value at $2,000, 
+//you can calculate its straight-line depreciation per year as follows:
+
+
+SLN(10000, 2000, 5)
+//$1,600 of depreciation per year.
+
+
+//equipment purchase ($10,000 initial cost, $2,000 salvage value, and a 5-year life), 
+//to calculate the depreciation for the second year, you would use:
+
+SYD(10000, 2000, 5, 2)

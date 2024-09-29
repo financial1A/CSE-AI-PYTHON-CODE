@@ -1,0 +1,14 @@
+//bond with a 5% coupon rate, purchased at $95, with a $100 face value, semiannual payments,
+// and maturing on December 31, 2030, purchased on January 1, 2024, you can calculate the yield as:
+
+YIELD(DATE(2024,1,1), DATE(2030,12,31), 0.05, 95, 100, 2)
+
+//bond purchased on January 1, 2024, maturing on December 31, 2024, 
+//with a face value of $100 and purchased for $90, you can calculate the discount yield as:
+
+YIELDDISC(DATE(2024,1,1), DATE(2024,12,31), 90, 100)
+
+//bond issued on January 1, 2020, purchased on January 1, 2024, maturing on December 31, 2026,
+// with an interest rate of 6% and purchased at $95, you can calculate the yield to maturity as:
+
+YIELDMAT(DATE(2024,1,1), DATE(2026,12,31), DATE(2020,1,1), 0.06, 95)

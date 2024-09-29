@@ -1,0 +1,36 @@
+// ProductID	ProductName         Category
+// 1001	        Smartphone X100     Smartphone
+// 1002	        Laptop Pro 15       Smartphone
+// 1003	        Wireless Phone      PHONE
+// 1004	        Tablet Z Pro        Smartphone
+
+ContainsPhone = 
+IF(CONTAINSSTRING(Products[ProductName], "Phone"), 
+   "Contains Phone", 
+   "Does not contain Phone")
+
+
+CheckExactCategory = 
+IF(CONTAINSSTRINGEXACT(Products[Category], "Smartphone"), 
+   "Category is Smartphone", 
+   "Category is not Smartphone")
+
+
+// TransactionID	Department	SalesAmount	Date
+// 101	            Sales	    500	        2024-01-01
+// 102	            Marketing	700	        2024-01-02
+// 103	            Finance	    800	        2024-01-03
+// 104	            Sales	    600	        2024-01-04
+// 105	            Marketing	900	        2024-01-05
+// 106	            Finance	    1000	    2024-01-06
+
+FilteredSalesData = 
+CALCULATETABLE(
+    SalesData,
+    SalesData[Department] = CUSTOMDATA()
+)
+
+
+// TransactionID	Department	SalesAmount	Date
+// 101	            Sales	    500	        2024-01-01
+// 104	            Sales	    600	        2024-01-04

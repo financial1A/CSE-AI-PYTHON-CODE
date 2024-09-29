@@ -1,0 +1,16 @@
+//asset costing $10,000, with a salvage value of $1,000, over a useful life of 5 years, 
+//and calculate depreciation from year 1 to year 2 using a double-declining balance method,
+//you can use:
+
+VDB(10000, 1000, 5, 1, 2)
+
+// initial investment of -$5,000 on January 1, 2024, followed by cash inflows of $1,500 on March 1, 2024,
+// $2,000 on June 1, 2024, and $2,500 on December 1, 2024. To calculate the IRR:
+
+XIRR({-5000, 1500, 2000, 2500}, {DATE(2024,1,1), DATE(2024,3,1), DATE(2024,6,1), DATE(2024,12,1)})
+
+
+// cash flows as the XIRR example, to calculate the net present value with a discount rate of 10%,
+// you can use:
+
+XNPV(0.10, {-5000, 1500, 2000, 2500}, {DATE(2024,1,1), DATE(2024,3,1), DATE(2024,6,1), DATE(2024,12,1)})

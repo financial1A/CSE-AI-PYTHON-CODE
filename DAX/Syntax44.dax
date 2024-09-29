@@ -1,0 +1,29 @@
+CheckScope = 
+IF(ISINSCOPE(Sales[ProductSubCategory]), 
+   "At SubCategory Level", 
+   "Not SubCategory Level")
+
+// ProductCategory	ProductSubCategory	SalesAmount
+// Electronics	    Laptops	            500
+// Electronics	    Smartphones	        300
+
+
+CheckLogical = 
+IF(ISLOGICAL(Sales[IsDiscounted]), 
+   "Valid Logical Value", 
+   "Not Logical Value")
+
+// SalesID	SalesAmount	IsDiscounted
+// 1	    500	        TRUE
+// 2	    300	        FALSE
+// 3	    400	        "Yes"
+
+CheckNonText = 
+IF(ISNONTEXT(Sales[ProductName]), 
+   "Not Text", 
+   "Text Value")
+
+// SalesID	ProductName	SalesAmount
+// 1	    "Laptop"	500
+// 2	    BLANK()	    300
+// 3	    123	        400

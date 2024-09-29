@@ -1,0 +1,14 @@
+//T-bill with a settlement date of March 1, 2024, a maturity date of September 1, 2024,
+// and a discount rate of 2.5%. The equivalent yield is calculated as:
+
+TBILLEQ(DATE(2024, 3, 1), DATE(2024, 9, 1), 0.025)
+
+//T-bill with a settlement date of March 1, 2024, a maturity date of September 1, 2024,
+// and a discount rate of 3%, you can use the following:
+
+TBILLPRICE(DATE(2024, 3, 1), DATE(2024, 9, 1), 0.03)
+
+//T-bill on March 1, 2024, that matures on September 1, 2024, 
+//and you pay $980 for the T-bill, you can calculate its yield:
+
+TBILLYIELD(DATE(2024, 3, 1), DATE(2024, 9, 1), 980)

@@ -1,0 +1,17 @@
+// ProductID,   Category,       SalesAmount
+// 1001,        Electronics,    200
+// 1002,        Electronics,    300
+// 1003,        Furniture,      150
+// 1001,        Clothing,       400
+
+
+CheckContainsProductID = 
+IF(CONTAINS(Sales, Sales[ProductID], 1001), 
+   "ProductID 1001 exists", 
+   "ProductID 1001 does not exist")
+
+
+CheckContainsRow = 
+IF(CONTAINSROW(Sales, Sales[ProductID], 1001, Sales[Category], "Electronics"), 
+   "Row exists with ProductID 1001 and Category Electronics", 
+   "Row does not exist with ProductID 1001 and Category Electronics")
